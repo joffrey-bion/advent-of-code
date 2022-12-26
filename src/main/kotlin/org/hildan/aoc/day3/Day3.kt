@@ -5,18 +5,17 @@ import org.hildan.aoc.client.inputLines
 fun main() {
     val inputLines = inputLines(day = 3)
     println(inputLines.sumOf { findDuplicateType(it).priority() })
-    println(inputLines.chunked(3).sumOf { findCommonType(it).priority() })
+    println(inputLines.chunked(3).sumOf { it.singleCommonChar().priority() })
 }
 
-private fun findDuplicateType(contents: String): Char {
-    val (left, right) = contents.splitInHalves().map { it.toSet() }
-    return (left intersect right).single()
-}
+private fun findDuplicateType(contents: String): Char = contents.splitInHalf().singleCommonChar()
 
-private fun String.splitInHalves() = chunked(length / 2)
+private fun String.splitInHalf() = chunked(length / 2)
 
-private fun findCommonType(rucksacks: List<String>): Char {
-    return rucksacks.map { it.toSet() }.reduce { acc, bag -> acc intersect bag }.single()
-}
+private fun List<String>.singleCommonChar(): Char = map { it.toSet() }.intersectAll().single()
 
+private fun <T> Iterable<Set<T>>.intersectAll() = reduce { acc, set -> acc intersect set }
+
+// Lowercase item types a through z have priorities 1 through 26.
+// Uppercase item types A through Z have priorities 27 through 52.
 private fun Char.priority(): Int = if (isLowerCase()) this - 'a' + 1 else this - 'A' + 27
