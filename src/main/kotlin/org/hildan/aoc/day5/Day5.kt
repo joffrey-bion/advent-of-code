@@ -4,12 +4,13 @@ import org.hildan.aoc.client.inputLines
 import java.util.Stack
 
 fun main() {
-    part1()
-    part2()
+    val inputLines = inputLines(day = 5)
+    println(part1(inputLines))
+    println(part2(inputLines))
 }
 
-private fun part1() {
-    val (stacks, moves) = parseInput()
+private fun part1(inputLines: List<String>): String {
+    val (stacks, moves) = inputLines.parse()
 
     moves.forEach { move ->
         repeat(move.quantity) {
@@ -17,23 +18,22 @@ private fun part1() {
             stacks[move.destStack].push(elt)
         }
     }
-    println(stacks.joinToString("") { it.peek().toString() })
+    return stacks.joinToString("") { it.peek().toString() }
 }
 
-private fun part2() {
-    val (stacks, moves) = parseInput()
+private fun part2(inputLines: List<String>): String {
+    val (stacks, moves) = inputLines.parse()
 
     moves.forEach { move ->
         val eltToMove = List(move.quantity) { stacks[move.sourceStack].pop() }
         eltToMove.reversed().forEach { stacks[move.destStack].push(it) }
     }
-    println(stacks.joinToString("") { it.peek().toString() })
+    return stacks.joinToString("") { it.peek().toString() }
 }
 
-private fun parseInput(): Input {
-    val inputLines = inputLines(day = 5)
-    val stacksConfiguration = inputLines.takeWhile { it.isNotEmpty() }
-    val encodedMoves = inputLines.drop(stacksConfiguration.size).dropWhile { it.isEmpty() }
+private fun List<String>.parse(): Input {
+    val stacksConfiguration = takeWhile { it.isNotEmpty() }
+    val encodedMoves = drop(stacksConfiguration.size).dropWhile { it.isEmpty() }
 
     val stacks = parseStacks(stacksConfiguration)
     val moves = encodedMoves.map { Move.parse(it) }
