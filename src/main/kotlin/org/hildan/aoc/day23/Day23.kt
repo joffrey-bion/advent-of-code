@@ -5,8 +5,8 @@ import org.hildan.aoc.client.inputLines
 
 fun main() {
     val lines = inputLines(day = 23)
-    println(Map(lines).part1()) // 15898 too high
-    println(Map(lines).part2()) // 1015 too low
+    println(Map(lines).part1())
+    println(Map(lines).part2())
 }
 
 private class Map(lines: List<String>) {
