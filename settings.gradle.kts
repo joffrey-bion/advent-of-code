@@ -4,7 +4,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "advent-of-code-2022"
+rootProject.name = "advent-of-code"
 
 include(":aoc-client")
 include(":2022")
