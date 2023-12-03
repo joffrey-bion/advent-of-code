@@ -4,7 +4,7 @@ import org.hildan.aoc.client.inputFile
 import kotlin.io.path.readText
 
 fun main() {
-    val input = inputFile(day = 6).readText()
+    val input = inputFile(year = 2022, day = 6).readText()
     println(input.indexOfMarker(4))
     println(input.indexOfMarker(14))
 }

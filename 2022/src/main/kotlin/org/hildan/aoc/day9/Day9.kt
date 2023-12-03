@@ -4,7 +4,7 @@ import org.hildan.aoc.client.inputLines
 import kotlin.math.abs
 
 fun main() {
-    val moves = inputLines(day = 9).map { it.parseMove() }
+    val moves = inputLines(year = 2022, day = 9).map { it.parseMove() }
     println(part1(moves))
     println(part2(moves))
 }

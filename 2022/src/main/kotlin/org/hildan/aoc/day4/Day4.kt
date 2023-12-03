@@ -3,7 +3,7 @@ package org.hildan.aoc.day4
 import org.hildan.aoc.client.inputLines
 
 fun main() {
-    val inputLines = inputLines(day = 4)
+    val inputLines = inputLines(year = 2022, day = 4)
     println(inputLines.count { it.hasRedundantAssignment() })
     println(inputLines.count { it.hasOverlappingAssignments() })
 }

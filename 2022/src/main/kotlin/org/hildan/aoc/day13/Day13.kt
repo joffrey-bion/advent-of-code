@@ -4,7 +4,7 @@ import org.hildan.aoc.client.inputLines
 import kotlinx.serialization.json.*
 
 fun main() {
-    val pairs = inputLines(day = 13).filter { it.isNotEmpty() }.map { Packet.parse(it) }
+    val pairs = inputLines(year = 2022, day = 13).filter { it.isNotEmpty() }.map { Packet.parse(it) }
     println(part1(pairs))
     println(part2(pairs))
 }

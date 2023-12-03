@@ -3,7 +3,7 @@ package org.hildan.aoc.day20
 import org.hildan.aoc.client.inputLines
 
 fun main() {
-    val numbers = inputLines(day = 20).map { it.toLong() }
+    val numbers = inputLines(year = 2022, day = 20).map { it.toLong() }
 
     println(mix(numbers, nMixingRounds = 1).coordinatesSum()) // 15297
     println(mix(numbers.map { it * 811589153 }, nMixingRounds = 10).coordinatesSum()) // 2897373276210

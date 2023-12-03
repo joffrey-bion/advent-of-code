@@ -4,7 +4,7 @@ import org.hildan.aoc.client.inputLines
 import kotlin.math.abs
 
 fun main() {
-    val commands = inputLines(day = 10).map { Command.parse(it) }
+    val commands = inputLines(year = 2022, day = 10).map { Command.parse(it) }
     println(part1(commands))
     println(part2(commands))
 }

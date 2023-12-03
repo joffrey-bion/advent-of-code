@@ -29,7 +29,7 @@ private fun part2(): BigInteger {
 }
 
 private fun parseInputFileStructure() =
-    inputLines(day = 7).map { it.parseTerminalLine() }.parseFileStructure()
+    inputLines(year = 2022, day = 7).map { it.parseTerminalLine() }.parseFileStructure()
 
 private fun List<TerminalLine>.parseFileStructure(): FileTreeNode.Dir {
     var currentDir: FileTreeNode.Dir? = null

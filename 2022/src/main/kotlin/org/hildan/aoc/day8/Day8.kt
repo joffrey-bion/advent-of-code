@@ -3,7 +3,7 @@ package org.hildan.aoc.day8
 import org.hildan.aoc.client.inputLines
 
 fun main() {
-    val inputLines = inputLines(day = 8)
+    val inputLines = inputLines(year = 2022, day = 8)
     val heights = inputLines.map { line -> line.map { it.digitToInt() } }
     println(heights.countVisibleTrees())
     println(heights.maxViewingDistance())

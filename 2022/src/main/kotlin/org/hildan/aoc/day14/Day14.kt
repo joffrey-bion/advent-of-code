@@ -3,7 +3,7 @@ package org.hildan.aoc.day14
 import org.hildan.aoc.client.inputLines
 
 fun main() {
-    val paths = inputLines(day = 14).map { it.parsePath() }
+    val paths = inputLines(year = 2022, day = 14).map { it.parsePath() }
     println(part1(paths))
     println(part2(paths))
 }

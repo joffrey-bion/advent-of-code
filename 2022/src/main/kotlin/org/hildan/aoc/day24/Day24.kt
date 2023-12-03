@@ -3,7 +3,7 @@ package org.hildan.aoc.day24
 import org.hildan.aoc.client.inputLines
 
 fun main() {
-    val lines = inputLines(day = 24)
+    val lines = inputLines(year = 2022, day = 24)
     println(Map(lines).part1())
     println(Map(lines).part2())
 }

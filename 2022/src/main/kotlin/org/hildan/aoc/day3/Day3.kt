@@ -3,7 +3,7 @@ package org.hildan.aoc.day3
 import org.hildan.aoc.client.inputLines
 
 fun main() {
-    val inputLines = inputLines(day = 3)
+    val inputLines = inputLines(year = 2022, day = 3)
     println(inputLines.sumOf { findDuplicateType(it).priority() })
     println(inputLines.chunked(3).sumOf { it.singleCommonChar().priority() })
 }

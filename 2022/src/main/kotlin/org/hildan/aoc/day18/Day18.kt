@@ -4,7 +4,7 @@ import org.hildan.aoc.client.inputLines
 import kotlin.math.abs
 
 fun main() {
-    val cubes = inputLines(day = 18).map { it.parsePoint() }
+    val cubes = inputLines(year = 2022, day = 18).map { it.parsePoint() }
     println(surfaceArea(cubes)) // 4282
     println(outerSurfaceArea(cubes)) // 5180 is too high
 }

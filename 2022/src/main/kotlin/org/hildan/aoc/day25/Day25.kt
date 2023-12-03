@@ -5,7 +5,7 @@ import java.lang.StringBuilder
 import kotlin.math.pow
 
 fun main() {
-    val snafuNumbers = inputLines(day = 25).map { it.parseSnafuLong() }
+    val snafuNumbers = inputLines(year = 2022, day = 25).map { it.parseSnafuLong() }
     println(snafuNumbers.sum().formatSnafu())
 }
 

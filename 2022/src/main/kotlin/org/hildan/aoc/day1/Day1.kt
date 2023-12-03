@@ -3,7 +3,7 @@ package org.hildan.aoc.day1
 import org.hildan.aoc.client.inputLines
 
 fun main() {
-    val elfCalories = inputLines(day = 1).elvesTotalCalories().toList()
+    val elfCalories = inputLines(year = 2022, day = 1).elvesTotalCalories().toList()
     println(elfCalories.max())
     println(elfCalories.sortedDescending().take(3).sum())
 }

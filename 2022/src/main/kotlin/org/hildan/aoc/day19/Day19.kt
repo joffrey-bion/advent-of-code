@@ -4,7 +4,7 @@ import org.hildan.aoc.day19.ResourceType.*
 import org.hildan.aoc.client.inputLines
 
 fun main() {
-    val blueprints = inputLines(day = 19).map { it.parseBlueprint() }
+    val blueprints = inputLines(year = 2022, day = 19).map { it.parseBlueprint() }
     println(blueprints.sumOf { it.computeQuality(24) }) // 1092
     println(blueprints.take(3).map { it.maxProducedGeodesIn(32) }.reduce(Int::times)) //
 }

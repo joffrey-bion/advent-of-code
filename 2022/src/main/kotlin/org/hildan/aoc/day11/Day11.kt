@@ -4,7 +4,7 @@ import org.hildan.aoc.client.inputFile
 import kotlin.io.path.readText
 
 fun main() {
-    val input = inputFile(day = 11).readText()
+    val input = inputFile(year = 2022, day = 11).readText()
     // monkeys are mutable, we must read them twice
     println(part1(readMonkeys(input)))
     println(part2(readMonkeys(input)))

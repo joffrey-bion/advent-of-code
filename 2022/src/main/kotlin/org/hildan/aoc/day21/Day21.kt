@@ -3,7 +3,7 @@ package org.hildan.aoc.day21
 import org.hildan.aoc.client.inputLines
 
 fun main() {
-    val monkeys = inputLines(day = 21).associate { it.parseMonkey() }
+    val monkeys = inputLines(year = 2022, day = 21).associate { it.parseMonkey() }
     println(Monkeys(monkeys).compute("root"))
 
     val monkeysWithVar = monkeys + ("humn" to Expr.Human)

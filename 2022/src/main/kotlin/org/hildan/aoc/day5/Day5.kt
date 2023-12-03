@@ -4,7 +4,7 @@ import org.hildan.aoc.client.inputLines
 import java.util.Stack
 
 fun main() {
-    val inputLines = inputLines(day = 5)
+    val inputLines = inputLines(year = 2022, day = 5)
     println(part1(inputLines))
     println(part2(inputLines))
 }

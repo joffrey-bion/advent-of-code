@@ -4,7 +4,7 @@ import org.hildan.aoc.client.inputLines
 import kotlin.math.abs
 
 fun main() {
-    val sensors = inputLines(day = 15).map { it.parseSensor() }
+    val sensors = inputLines(year = 2022, day = 15).map { it.parseSensor() }
     val map = Map(sensors)
     println(map.countRuledOutPositionsInRow(2_000_000))
     println(map.findSinglePossibleBeaconPositionIn(xRange = 0..4_000_000, yRange = 0..4_000_000).tuningFrequency)

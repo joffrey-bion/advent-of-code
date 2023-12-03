@@ -4,7 +4,7 @@ import org.hildan.aoc.client.inputLines
 import java.util.LinkedList
 
 fun main() {
-    val graph = inputLines(day = 12).filter { it.isNotEmpty() }.toGraph()
+    val graph = inputLines(year = 2022, day = 12).filter { it.isNotEmpty() }.toGraph()
     println(part1(graph))
     println(part2(graph))
 }

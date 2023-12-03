@@ -32,7 +32,7 @@ private val binaryShapePatterns = shapesText.split("\n\n").map {
 
 fun main() {
     val shapes = binaryShapePatterns.map { Shape(it.lines()) }
-    val jetPattern = inputFile(day = 17).readText().trim()
+    val jetPattern = inputFile(year = 2022, day = 17).readText().trim()
     println(Cave(shapes, jetPattern).heightAfterNRockFall(2022)) // 3081
     println(Cave(shapes, jetPattern).heightAfterNRockFallWithStates(1_000_000_000_000L)) // 1524637681145
 }

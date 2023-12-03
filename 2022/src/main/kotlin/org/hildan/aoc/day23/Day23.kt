@@ -4,7 +4,7 @@ import org.hildan.aoc.day23.Direction.*
 import org.hildan.aoc.client.inputLines
 
 fun main() {
-    val lines = inputLines(day = 23)
+    val lines = inputLines(year = 2022, day = 23)
     println(Map(lines).part1())
     println(Map(lines).part2())
 }

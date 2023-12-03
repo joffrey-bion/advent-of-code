@@ -5,7 +5,7 @@ import org.hildan.aoc.client.inputLines
 private const val CUBE_SIZE = 50
 
 fun main() {
-    val lines = inputLines(day = 22)
+    val lines = inputLines(year = 2022, day = 22)
     val rows = lines.takeWhile { it.isNotEmpty() }
     val moves = lines.last().parseMoves()
     println(Map(rows, part2 = false).move(moves).password) // 31568

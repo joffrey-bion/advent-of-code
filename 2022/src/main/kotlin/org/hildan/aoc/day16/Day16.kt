@@ -5,7 +5,7 @@ import org.hildan.aoc.client.inputLines
 private const val START_VALVE_NAME = "AA"
 
 fun main() {
-    val valves = inputLines(day = 16).map { it.parseValve() }
+    val valves = inputLines(year = 2022, day = 16).map { it.parseValve() }
     val graph = valves.resolveAndRemoveZeroValves()
     println(Graph(graph, part2 = false).maxReleasablePressure()) // 1880
     println(Graph(graph, part2 = true).maxReleasablePressure()) // 2520

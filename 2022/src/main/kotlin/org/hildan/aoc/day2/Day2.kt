@@ -3,7 +3,7 @@ package org.hildan.aoc.day2
 import org.hildan.aoc.client.inputLines
 
 fun main() {
-    val inputLines = inputLines(day = 2)
+    val inputLines = inputLines(year = 2022, day = 2)
     println(inputLines.sumOf { matchScorePart1(it) })
     println(inputLines.sumOf { matchScorePart2(it) })
 }
