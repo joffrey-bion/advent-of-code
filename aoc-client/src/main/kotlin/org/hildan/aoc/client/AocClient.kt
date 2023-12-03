@@ -7,9 +7,9 @@ import kotlin.io.path.*
 private val inputsDir = Path("inputs").also { it.createDirectories() }
 private val answersDir = Path("answers").also { it.createDirectories() }
 
-internal fun inputLines(day: Int, year: Int = 2022) = inputFile(day, year).readLines()
+fun inputLines(day: Int, year: Int = 2022) = inputFile(day, year).readLines()
 
-internal fun inputFile(day: Int, year: Int = 2022): Path {
+fun inputFile(day: Int, year: Int = 2022): Path {
     val formattedDay = String.format("%02d", day)
     val inputPath = inputsDir.resolve("input-$year-day-${formattedDay}.txt")
     if (!inputPath.exists()) {
