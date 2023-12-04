@@ -27,16 +27,8 @@ private val digits = List(10) { "$it" to it }.toMap() + mapOf(
     "nine" to 9,
 )
 
-private data class DigitOccurrence(val index: Int, val digit: Int)
-
 private fun String.calibrationNumber2(): Int {
-    findLastAnyOf(digits.keys)?.second?.let { digits[it] }
-    val occs = digits
-        .map { (d, v) -> DigitOccurrence(indexOf(d), v) }
-        .filter { it.index >= 0 }
-        .sortedBy { it.index }
-        .map { it.digit }
-    val first = occs.first()
-    val last = occs.last()
+    val first = findAnyOf(digits.keys)?.second?.let { digits.getValue(it) }!!
+    val last = findLastAnyOf(digits.keys)?.second?.let { digits.getValue(it) }!!
     return first * 10 + last
 }
