@@ -5,8 +5,8 @@ import kotlin.math.*
 
 fun main() {
     val inputLines = inputLines(year = 2023, day = 6)
-    println(part1(inputLines))
-    println(part2(inputLines))
+    println(part1(inputLines)) // 449820
+    println(part2(inputLines)) // 42250895
 }
 
 private fun part1(inputLines: List<String>): Long = inputLines.parseRaces().map { it.nWaysToBeatRecord() }.fold(1, Long::times)
@@ -20,8 +20,8 @@ private fun List<String>.parseRaces(): List<Race> {
 }
 
 private fun List<String>.parseSingleRace(): Race {
-    val time = get(0).removePrefix("Time:").trim().split(Regex("""\s+""")).joinToString("").toLong()
-    val record = get(1).removePrefix("Distance:").trim().split(Regex("""\s+""")).joinToString("").toLong()
+    val time = get(0).removePrefix("Time:").replace(" ", "").toLong()
+    val record = get(1).removePrefix("Distance:").replace(" ", "").toLong()
     return Race(duration = time, recordDistance = record)
 }
 
